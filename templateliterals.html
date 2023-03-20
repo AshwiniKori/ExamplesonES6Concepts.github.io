@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Template Literals</h2>
+
+
+    <script>
+        var firstName = "Ashwini";
+        var lastName = "Kori";
+        var fullName = `${firstName} ${lastName}`;
+        console.log(`My name is ${firstName}`);
+        console.log(`My Surname is ${lastName}`);
+        console.log(`My Full Name is ${fullName}`);
+
+        // using the + operator
+        const message1 = 'This is a long message\n' +
+            'that spans across multiple lines\n' +
+            'in the code.'
+        console.log(message1);
+
+        const message2 = `This is a long message
+that spans across multiple lines
+in the code.`
+        console.log(message2);
+
+        const name = 'Jack';
+        const greet = true;
+        function tagExample(strings, nameValue) {
+            let str0 = strings[0]; // Hello
+            let str1 = strings[1]; // , How are you?
+
+            if (greet) {
+                return `${str0}${nameValue}${str1}`;
+            }
+        }
+        // creating tagged literal
+        // passing argument name
+        const result = tagExample`Hello ${name}, How are you?`;
+
+        console.log(result);
+    </script>
+</body>
+
+</html>

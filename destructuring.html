@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Destructuring</h2>
+
+    <script>
+        //without destrucing
+        const person = {
+            name: "Ashwini",
+            age: 27,
+            gender: "female"
+        }
+        let name = person.name;
+        let age = person.age;
+        let gender = person.gender;
+
+        console.log(name);
+        console.log(age);
+        console.log(gender);
+
+        //with Destructuring
+        const girl = {
+            name1: "Soumya",
+            age1: 25,
+            place: "Hubli"
+        }
+        let { name1, age1, place } = girl;
+        console.log(name1);
+        console.log(age1);
+        console.log(place);
+
+        //array Destructuring
+        const number = [10, 20, 30, 40];
+        const [a, b, c, d] = number;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        //nested destructuring
+        const value = [1, 2, [3, 4, 5]];
+        const [p, q, [r, s, t]] = value;
+        console.log(p);
+        console.log(q);
+        console.log(r);
+        console.log(s);
+        console.log(t);
+
+        // const boy = {
+        //     name2: 'Jack',
+        //     age2: 26,
+        //     hobbies: {
+        //         read: true,
+        //         playGame: true
+        //     }
+        // }
+        // // nested destructuring 
+        // const { name2, age2, hobbies: { read, playGame } } = person;
+
+        // console.log(name2); // Jack
+        // console.log(age2);
+        // console.log(read); // true
+        // console.log(playGame); // true
+
+        function calculate(a, b) {
+            const add = a + b;
+            const subtract = a - b;
+            const multiply = a * b;
+            const divide = a / b;
+
+            return [add, subtract, multiply, divide];
+        }
+
+        const [add, subtract, multiply, divide] = calculate(4, 7);
+        console.log(add);
+        console.log(subtract);
+        console.log(multiply);
+        console.log(divide);
+
+
+    </script>
+</body>
+
+</html>

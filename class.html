@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Classes</h2>
+
+    <script>
+        class Car {
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+        const Car1 = new Car("Ford", 2014);
+        const Car2 = new Car("Audi", 2019);
+        console.log(Car1.name +" " + Car1.year);
+        console.log(Car2.name +" " + Car2.year);
+
+        class Girl {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age() {
+                let date = new Date;
+                return date.getFullYear() - this.year;
+            }
+        }
+        const Girl1 = new Girl("Neha", 1999);
+        console.log("Neha is "+ Girl1.age() + "years old.");
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+        let greet = () => console.log('Hello');
+        greet(); // Hello
+
+        //normal function
+        function test1() {
+            return 1;
+        }
+        document.write(test1() + "<br>");
+
+        //anonymous function
+        let test2 = function() {
+            return 1;
+        }
+        document.write(test2() + "<br>");
+
+        //arrow function
+        let test3 = () => {
+            return 1;
+        }
+        document.write(test3() + "<br>");
+
+        //normal function
+        let data = [10, 20, 30, 40, 50];
+        let newData = data.map(function(item){
+           return item * 2;
+        })
+        document.write(newData + "<br>");
+
+        //arrow function
+        let data1 = [10, 20, 30, 40, 50];
+        let newData1 = data.map((item) => item * 2)
+        document.write(newData1 + "<br>");
+
+        let item = {
+            name: "Ashwini",
+            getName: function() {
+                console.log(this);
+            }
+        }
+        item.getName();
+
+        let item1 = {
+            name: "Ashwini",
+            getName: () => {
+                console.log(this);
+            }
+        }
+        item1.getName();
+
+        
+    </script>
+</body>
+</html>

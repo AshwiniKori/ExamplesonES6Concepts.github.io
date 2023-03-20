@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Callback function</h2>
+
+    <script>
+        function myDisplayer(something) {
+            console.log(something);
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+        //seTimeout()
+        // setTimeout(myFunction, 3000);
+        // function myFunction() {
+        //     alert("This is myFunction");
+        // }
+
+        // setTimeout(function myFunction() {
+        //     alert("This is Function");
+        // }, 3000);
+
+        //setInterval()
+        setInterval(myFunction, 2000);
+        function myFunction() {
+            alert("Hello");
+        }
+        clearInterval();
+
+
+    </script>
+</body>
+
+</html>

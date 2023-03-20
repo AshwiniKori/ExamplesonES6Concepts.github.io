@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Const Keyword</h2>
+
+    <script>
+        //cannot be reassigned
+        const PI = 3.142;
+        console.log(PI);
+        // PI = 3.142;//error
+        //PI = PI + 3.142;//error
+
+        //const array
+        const cars = ["Saab", "Volvo", "BMW"];
+        console.log(cars);
+        //we can change the element
+        cars[0] = "Toyota";
+        console.log(cars);
+        //we can add an element
+        cars.push("Audi");
+        console.log(cars);
+        // //but we can reassign the const
+        // const car = ["Saab", "Audi"];
+        // car = ["Toyota", "Ford"];
+        // console.log(car); //error
+
+        //const object
+        const car1 = {
+            type:"Fait",
+            model:"500",
+            color:"white"
+        }
+        console.log(car1);
+        //we can change the property
+        car1.color = "red";
+        console.log(car1);
+        //we can add propert
+        car1.owner = "John";
+        console.log(car1);
+
+    </script>
+</body>
+</html>
